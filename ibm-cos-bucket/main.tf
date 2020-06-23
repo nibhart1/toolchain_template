@@ -1,6 +1,6 @@
 
 resource "ibm_resource_group" "cos_group" {
-  name     = "prod"
+  name     = "dev"
 }
 
 resource "ibm_resource_instance" "cos_instance" {
