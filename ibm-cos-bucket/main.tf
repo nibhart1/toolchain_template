@@ -12,7 +12,7 @@ resource "ibm_resource_instance" "cos_instance" {
 }
 
 resource "ibm_cos_bucket" "standard-ams03" {
-  bucket_name          = "ibm-mybucket"
+  bucket_name          = "ibm1-mybucket"
   resource_instance_id = ibm_resource_instance.cos_instance.id
   region_location      = "us-south"
   storage_class        = "standard"
