@@ -1,10 +1,10 @@
 
 resource "ibm_resource_group" "cos_group" {
-  name     = "dev"
+  name     = "prod"
 }
 
 resource "ibm_resource_instance" "cos_instance" {
-  name              = "cos-instance1"
+  name              = "cos-instance3"
   resource_group_id = ibm_resource_group.cos_group.id
   service           = "cloud-object-storage"
   plan              = "standard"
