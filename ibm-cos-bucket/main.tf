@@ -1,10 +1,10 @@
 
 resource "ibm_resource_group" "cos_group" {
-  name     = "prod-new"
+  name     = "prod2"
 }
 
 resource "ibm_resource_instance" "cos_instance" {
-  name              = "cos-instance3"
+  name              = "my-cos-instance"
   resource_group_id = ibm_resource_group.cos_group.id
   service           = "cloud-object-storage"
   plan              = "standard"
@@ -12,7 +12,7 @@ resource "ibm_resource_instance" "cos_instance" {
 }
 
 resource "ibm_cos_bucket" "standard-ams03" {
-  bucket_name          = "ibm3-mybucket"
+  bucket_name          = "ibm-my-bucket"
   resource_instance_id = ibm_resource_instance.cos_instance.id
   region_location      = "us-south"
   storage_class        = "standard"
